@@ -79,3 +79,138 @@ MySQL is a simple SQL database that is perfectly compatible with C#.
 #### Dataset
 
 [This](https://www.kaggle.com/rohanrao/formula-1-world-championship-1950-2020?select=pit_stops.csv) dataset was used in the project due to the fact that conforms all of the requirements and is quite large (~18 MB).
+
+```
+circuits (
+	circuitId int PK,
+    circuitRef string,
+    name string,
+    location string,
+    country string,
+    lat float,
+    lng float,
+    alt float,
+    url string
+)
+
+constructor_results (
+	id int PK,
+    raceId int FK,
+    constructorId int FK,
+    points int,
+    status int FK
+)
+
+constructor_standings (
+	id int PK,
+    raceId int FK,
+    constructorId int FK,
+    points int,
+    position int,
+    positionText string,
+    wins int
+)
+
+constructors (
+	id int PK,
+    constructorRef string,
+    name string,
+    nationality string,
+    url string
+)
+
+driver_standings (
+	id int PK,
+    raceId int FK,
+    driverId int FK,
+    points int,
+    position int,
+    positionText string,
+    wins int
+)
+
+drivers (
+	id int PK,
+    driverRef string,
+    number int,
+    code string,
+    forename string,
+    surname string,
+    dob date,
+    nationality string,
+    url string
+)
+
+lap_times (
+	raceId int FK,
+    driverId int FK,
+    lap int,
+    position int, 
+    time string,
+    milliseconds int
+)
+
+pit_stops (
+	raceId int FK,
+    driverId int FK,
+    stop int,
+    lap int,
+    time string,
+    duration float,
+    milliseconds int
+)
+
+qualifying (
+	qualifyId int PK,
+    raceId int FK,
+    driverId int FK,
+    constructorId int FK,
+    number int,
+    position int,
+    q1 string, 
+    q2 string,
+    q3 string
+)
+
+races (
+	raceId int PK,
+    year int, 
+    round int, 
+    circuitId int FK,
+    name string,
+    date date,
+    time string,
+    url string
+)
+
+results (
+	resultId int PK,
+    raceId int FK,
+    driverId int FK,
+    constructorId int FK,
+    number int,
+    grid int,
+    position int,
+    positionText string,
+    positionOrder int,
+    points int,
+    laps int,
+    time string,
+    milliseconds int,
+    fastestLap int,
+    rank int, 
+    fastestLapTime string,
+    fastestLapSpeed float,
+    statusId int FK
+)
+
+seasons (
+	year int PK,
+    url string
+)
+
+status (
+	statudId int PK,
+    status string
+)
+```
