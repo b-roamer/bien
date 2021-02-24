@@ -73,3 +73,9 @@ MySQL is a simple SQL database that is perfectly compatible with C#.
 
 **Q**: Which constructor holds the record for the most wins in a season? <br />
 **A**: By joining the races table with the constructor standings table and constructors table, we can group the races by the seasons and get the constructor with the most number of wins in every season. 
+
+--- 
+
+#### Dataset
+
+[This](https://www.kaggle.com/rohanrao/formula-1-world-championship-1950-2020?select=pit_stops.csv) dataset was used in the project due to the fact that conforms all of the requirements and is quite large (~18 MB).
