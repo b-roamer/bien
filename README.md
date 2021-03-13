@@ -33,14 +33,14 @@ MySQL is a simple SQL database that is perfectly compatible with C#.
 ---
 
 #### F.A.Q.
-**Q**: What is the purpose of *Bien*? <br />
-**A**: *Bien* is the ultimate source of historical data of all Formula-1 Races and was made to keep the legacy of it in the medium available for everyone. 
+**Q**: Can you get a list of all the races and their circuits? <br />
+**A**: Absolutely! By every races has its own circuit which you can get by joining the races table with the circuits table by circuit id. 
 
-**Q**: Who has the access to *Bien*? <br />
-**A**: *Bien* is an open-source, free-to-use web application that does not require any specific access permissions. As long as you have an internet connection, you are more than welcome to use it.
+**Q**: How can I see the results of the constructors in a particular season? <br />
+**A**: Via connecting the races table with the constructor results table, and filtering the required season, you can get the desired results. 
 
-**Q**: Who will use *Bien*? <br />
-**A**: Anyone who has at least the slightest interest in the grand history of Formula-1 Races. 
+**Q**: Can I get the Wikipedia page of a driver who won in a particular race? <br />
+**A**: By joining the results table with the drivers table, you can easily find out the winners Wikipedia URL if it is present in the database.  
 
 **Q**: How to see the drivers that participated in a particular race? <br />
 **A**: *Bien* allows you to search for any driver in its database who participated in any of the Formula-1 Races from 1950 to 2020.
