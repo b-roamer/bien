@@ -49,7 +49,7 @@ MySQL is a simple SQL database that is perfectly compatible with C#.
 **A**: By connecting the driver's id with the race id and the pitstops table, you can view the pitstop information.
 
 **Q**: How to see the circuit and pitstop times of a race won by a particular driver? <br />
-**A**: By joining the races table with the results table, and sorting them by their positions from the positions table, and getting the driver information from the drivers table, as well as the circuit information from the circuits table and the pitstops data from the pitstops table, we can get the full information about the circuit and pitstop times of the winner.
+**A**: By joining the races table with the results table, and sorting them by their positions from the driver standings table, and getting the driver information from the drivers table, as well as the circuit information from the circuits table and the pitstops data from the pitstops table, we can get the full information about the circuit and pitstop times of the winner.
 
 **Q**: Can you see the driver standings of a driver who was disqualified on a particular circuit in a particular year? <br />
 **A**: By connecting the status table with the results table, and getting the races in that particular year from the races table, and joining the drivers table with the driver standings table and their statuses, we can filter the disqualified drivers. 
