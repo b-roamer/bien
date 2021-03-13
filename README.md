@@ -10,7 +10,11 @@ Since the history of Formula-1 dates back to times way before web applications w
 ---
 
 #### Project Scope
-MVP is planned to be finished within a couple of months. After thorough testing and final production corrections *Bien* is projected to be fully operable by the end of March/April.
+*Bien* can be thought of as a digitilized library, an archive of the legendary Formula-1 races. From searching throughout the history of all the races and getting detailed information about the drivers, to seeing each individual pitstop duration of any race and the laptimes of anyone, *Bien* is the ultimate helper in diving deep into the world of Formula-1.
+
+You can look through the drivers qualifications, their standings in each race, status in the races they participated and their technical information such as their code names and wikipedia pages. 
+
+*Bien* also allows you to search through the circuits where the races were held and visit their wikipedia pages, get a detailed information about any race and their results. 
 
 ---
 
