@@ -1,8 +1,11 @@
--- How to get fastest laptimes in races on particular circuit in every season? (Bahrain International Circuit)
-select race.name, race.date, lt.lap, lt.time, lt.milliseconds
-from lap_times lt 
-join races race
-on lt.raceId = race.raceId
-where race.circuitId = (select circuitId from circuits where name = 'Bahrain International Circuit')
-order by lt.time
-limit 100;
+-- Who is the youngest winner in every season? 
+select driver.forename, driver.surname, driver.dob
+from drivers driver
+join results res
+on driver.driverId = res.driverId
+where driver.driverId in (select ress.driverId 
+from results ress
+join drivers d
+on ress.driverId = d.driverId
+where ress.raceId = res.raceId
+order by d.dob desc);
