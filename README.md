@@ -40,7 +40,7 @@ MySQL is a simple SQL database that is perfectly compatible with C#.
 **A**: Via connecting the races table with the constructor results table, and filtering the required season, you can get the desired results. 
 
 **Q**: Can I get the Wikipedia page of a driver who won in a particular race? <br />
-**A**: By joining the results table with the drivers table, you can easily find out the winners Wikipedia URL if it is present in the database.  
+**A**: By joining the races table with the driver standings table, you can easily find out the winners Wikipedia URL if it is present in the database.  
 
 **Q**: How to see the drivers that participated in a particular race? <br />
 **A**: *Bien* allows you to search for any driver in its database who participated in any of the Formula-1 Races from 1950 to 2020.
