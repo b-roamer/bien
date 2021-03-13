@@ -34,7 +34,7 @@ MySQL is a simple SQL database that is perfectly compatible with C#.
 
 #### F.A.Q.
 **Q**: Can you get a list of all the races and their circuits? <br />
-**A**: Absolutely! By every races has its own circuit which you can get by joining the races table with the circuits table by circuit id. 
+**A**: Absolutely! Every race has its own circuit which you can get by joining the races table with the circuits table by circuit id. 
 
 **Q**: How can I see the results of the constructors in a particular season? <br />
 **A**: Via connecting the races table with the constructor results table, and filtering the required season, you can get the desired results. 
