@@ -45,8 +45,8 @@ MySQL is a simple SQL database that is perfectly compatible with C#.
 **Q**: How to see the drivers that participated in a particular race? <br />
 **A**: *Bien* allows you to search for any driver in its database who participated in any of the Formula-1 Races from 1950 to 2020.
 
-**Q**: Can you see the pitstops of the drivers? <br />
-**A**: By connecting the driver's id with the race id, you can view the pitstop information, and then joining the drivers table with races table, you can get further details.
+**Q**: Can you see the pitstops of the drivers who participated in a particular race? <br />
+**A**: By connecting the driver's id with the race id and the pitstops table, you can view the pitstop information.
 
 **Q**: How to see the circuit and pitstop times of a race won by a particular driver? <br />
 **A**: By joining the races table with the results table, and sorting them by their positions from the positions table, and getting the driver information from the drivers table, as well as the circuit information from the circuits table and the pitstops data from the pitstops table, we can get the full information about the circuit and pitstop times of the winner.
