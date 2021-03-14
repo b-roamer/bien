@@ -218,3 +218,5 @@ status (
     status string
 )
 ```
+![UML](https://github.com/b-roamer/bien/blob/main/Bien-ER.png?raw=true)
+
