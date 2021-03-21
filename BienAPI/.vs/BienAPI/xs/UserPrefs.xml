@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{23E9B65B-4F96-45ED-B2C1-9BC0D7EC33CF}|Default">
+  <MonoDevelop.Ide.ItemProperties.BienAPI PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BienAPI/Controllers/WeatherForecastController.cs">
+    <Files>
+      <File FileName="BienAPI/WeatherForecast.cs" Line="1" Column="1" />
+      <File FileName="BienAPI/Controllers/WeatherForecastController.cs" Line="50" Column="1" />
+      <File FileName="BienAPI/Models/f1Context.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BienAPI" expanded="True">
+            <Node name="BienAPI" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="WeatherForecastController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/rustembaltiyev/Documents/GitHub/bien/BienAPI/BienAPI/Controllers/WeatherForecastController.cs" relfile="BienAPI/Controllers/WeatherForecastController.cs" line="43" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
