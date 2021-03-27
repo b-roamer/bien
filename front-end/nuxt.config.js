@@ -1,10 +1,7 @@
-import colors from 'vuetify/es5/util/colors'
-
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - bien',
-    title: 'bien',
+    title: 'front-end',
     htmlAttrs: {
       lang: 'en'
     },
@@ -14,26 +11,28 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;600&display=swap' }
     ]
   },
-
+  ssr: false,
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    'vuesax/dist/vuesax.css',
+    '@/assets/style.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '@/plugins/vuesax'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
-  ],
+  buildModules:
+    ['@nuxtjs/tailwindcss',  '@nuxtjs/moment',],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -42,25 +41,8 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
-
-  // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
-  vuetify: {
-    customVariables: ['~/assets/variables.scss'],
-    theme: {
-      dark: true,
-      themes: {
-        dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
+  axios: {
+    baseUrl: 'https://localhost:5001/api/'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

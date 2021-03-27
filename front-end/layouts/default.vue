@@ -1,117 +1,86 @@
 <template>
-  <v-app dark>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
+  <div class="">
+    <vs-navbar
+      text-white
+      color="#e10600"
+      class="sticky"
+      center-collapsed
+      v-model="active"
     >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
+      <template #left>
+        <img src="/logo.png" alt="" width="20%" />
+      </template>
+      <template #right>
+        <vs-navbar-item to="/" :active="active == 'home'" id="home">
+          <i class="bx bxs-home mr-1"></i>Home
+        </vs-navbar-item>
+        <vs-navbar-item
+          to="/circuits"
+          :active="active == 'circuits'"
+          id="circuits"
         >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-app-bar
-      :clipped-left="clipped"
-      fixed
-      app
+          <i class="bx bxs-map-alt mr-1"></i>Circuits
+        </vs-navbar-item>
+        <vs-navbar-item
+          to="/constructors"
+          :active="active == 'constructors'"
+          id="constructors"
+        >
+          <i class="bx bxs-car mr-1"></i>Constructors
+        </vs-navbar-item>
+        <vs-navbar-item to="/races" :active="active == 'races'" id="races">
+          <i class="bx bxs-flag-checkered mr-1"></i>Races
+        </vs-navbar-item>
+      </template>
+    </vs-navbar>
+    <Nuxt class="-mt-8 min-h-screen" />
+    <div
+      class="w-full bg-gray-900 h-64 text-white flex justify-center items-center text-center"
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
-    </v-app-bar>
-    <v-main>
-      <v-container>
-        <nuxt />
-      </v-container>
-    </v-main>
-    <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
-      fixed
-    >
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer
-      :absolute="!fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
-  </v-app>
+      <div>
+        <img class="mx-auto mb-4" src="f1-logo-red.png" alt="" width="50%" />
+        <p class="text-3xl font-bold">Bien</p>
+        <p class="text-xl">
+          The Ultimate Archive of<br />
+          <span class="font-bold red-under">Formula-1 Races</span>
+        </p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
+      active:
+        this.$route.path === '/' ? 'home' : this.$route.path.replace('/', ''),
     }
-  }
+  },
 }
 </script>
+
+
+<style>
+button:focus {
+  outline: 0;
+}
+.vs-input {
+  width: 100%;
+}
+hr {
+  border-top-width: 4px;
+  border-top-color: #e10600;
+}
+.text-red {
+  color: #e10600;
+}
+.red-under {
+  text-decoration: underline;
+  text-decoration-color: #e10600;
+  text-underline-offset: 8px;
+}
+.shadow {
+  box-shadow: 0px 4px 15px 0px rgba(225, 6, 0, 0.12);
+}
+</style>
