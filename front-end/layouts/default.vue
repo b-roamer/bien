@@ -14,6 +14,12 @@
         <vs-navbar-item to="/" :active="active == 'home'" id="home">
           <i class="bx bxs-home mr-1"></i>Home
         </vs-navbar-item>
+        <vs-navbar-item to="/races" :active="active == 'races'" id="races">
+          <i class="bx bxs-flag-checkered mr-1"></i>Races
+        </vs-navbar-item>
+        <vs-navbar-item to="/drivers" :active="active == 'drivers'" id="drivers">
+          <i class="bx bxs-user mr-1"></i>Drivers
+        </vs-navbar-item>
         <vs-navbar-item
           to="/circuits"
           :active="active == 'circuits'"
@@ -27,9 +33,6 @@
           id="constructors"
         >
           <i class="bx bxs-car mr-1"></i>Constructors
-        </vs-navbar-item>
-        <vs-navbar-item to="/races" :active="active == 'races'" id="races">
-          <i class="bx bxs-flag-checkered mr-1"></i>Races
         </vs-navbar-item>
       </template>
     </vs-navbar>
@@ -54,7 +57,7 @@ export default {
   data() {
     return {
       active:
-        this.$route.path === '/' ? 'home' : this.$route.path.replace('/', ''),
+        this.$route.path === '/' ? 'home' : this.$route.path.replaceAll('/', ''),
     }
   },
 }

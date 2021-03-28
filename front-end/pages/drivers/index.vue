@@ -1,13 +1,11 @@
 <template>
   <div class="px-8 lg:px-64 pt-16 pb-32">
-    <Races />
+    <Drivers />
   </div>
 </template>
 
 <script>
-export default {
-  
-}
+export default {}
 </script>
 
 <style>

@@ -15,20 +15,21 @@ namespace BienAPI.Controllers
         private f1Context _db = new f1Context();
         // GET: api/values
         [HttpGet]
-        public IQueryable<FormattedRace> Get(Pagination pagination)
+        public IQueryable<Object> Get(Pagination pagination)
         {
             return (from race in _db.Races
                     orderby race.Date descending, race.Name
                     where race.Name.Contains(pagination.Search ?? "")
                     && race.Year.ToString().Contains(pagination.Year ?? "")
                     && _db.Circuits.Where(c => c.CircuitId == race.CircuitId).FirstOrDefault().Name.Contains(pagination.Circuit ?? "")
-                    select new FormattedRace
+                    select new
                     {
                         RaceId = race.RaceId,
                         Circuit = _db.Circuits.Where(c => c.CircuitId == race.CircuitId).FirstOrDefault().Name,
                         Name = race.Name,
                         Date = race.Date,
-                        Url = race.Url
+                        Url = race.Url,
+                        Results = ResultsController.Get(race.RaceId).ToList(),
                     }).Skip((pagination.Page - 1) * pagination.PageSize)
                     .Take(pagination.PageSize);
         }

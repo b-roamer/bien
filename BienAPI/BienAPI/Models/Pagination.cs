@@ -9,6 +9,8 @@ namespace BienAPI.Models
         public string Country { get; set; } = "";
         public string Circuit { get; set; } = "";
         public string Nationality { get; set; } = "";
+        public string Constructor { get; set; } = "";
+        public string Race { get; set; } = "";
         private int _pageSize = 10;
         public int PageSize
         {
