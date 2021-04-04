@@ -1,14 +1,17 @@
 ﻿<Properties StartupConfiguration="{23E9B65B-4F96-45ED-B2C1-9BC0D7EC33CF}|Default">
   <MonoDevelop.Ide.ItemProperties.BienAPI PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BienAPI/Controllers/DriversController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BienAPI/Controllers/RacesController.cs">
     <Files>
       <File FileName="BienAPI/Startup.cs" Line="49" Column="62" />
-      <File FileName="BienAPI/Controllers/RacesController.cs" Line="34" Column="48" />
-      <File FileName="BienAPI/Models/Pagination.cs" Line="22" Column="14" />
-      <File FileName="BienAPI/Controllers/ResultsController.cs" Line="35" Column="21" />
-      <File FileName="BienAPI/Program.cs" Line="23" Column="35" />
+      <File FileName="BienAPI/Controllers/RacesController.cs" Line="21" Column="46" />
+      <File FileName="BienAPI/Models/Pagination.cs" />
+      <File FileName="BienAPI/Controllers/ResultsController.cs" />
+      <File FileName="BienAPI/Program.cs" />
       <File FileName="BienAPI/Controllers/DriversController.cs" Line="35" Column="10" />
-      <File FileName="BienAPI/Controllers/ConstructorsController.cs" Line="41" Column="10" />
+      <File FileName="BienAPI/Controllers/ConstructorsController.cs" />
+      <File FileName="BienAPI/Models/Circuit.cs" Line="15" Column="17" />
+      <File FileName="BienAPI/Models/f1Context.cs" Line="1" Column="1" />
+      <File FileName="BienAPI/Models/DriverStanding.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,7 +19,7 @@
           <Node name="BienAPI" expanded="True">
             <Node name="BienAPI" expanded="True">
               <Node name="Controllers" expanded="True">
-                <Node name="DriversController.cs" selected="True" />
+                <Node name="RacesController.cs" selected="True" />
               </Node>
               <Node name="Models" expanded="True" />
             </Node>
