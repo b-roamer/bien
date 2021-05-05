@@ -77,10 +77,20 @@
               <vs-td>
                 {{ tr.nationality }}
               </vs-td>
-              <template v-if="tr.url" #expand>
-                <vs-button @click="openLink(tr.url)" color="#e10600"
-                  >Wikipedia</vs-button
-                >
+              <template #expand>
+                <div class="flex">
+                  <vs-button
+                    @click="$router.push(`/drivers/${tr.driverId}`)"
+                    color="#e10600"
+                    >Details</vs-button
+                  >
+                  <vs-button
+                    v-if="tr.url"
+                    @click="openLink(tr.url)"
+                    color="#  "
+                    >Wikipedia</vs-button
+                  >
+                </div>
               </template>
             </vs-tr>
           </template>

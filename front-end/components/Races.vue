@@ -120,7 +120,9 @@
                         {{ tr.status }}
                       </vs-td>
                       <vs-td>
-                        <vs-button  color="#e10600"
+                        <vs-button
+                          @click="$router.push(`/drivers/${tr.driverId}`)"
+                          color="#e10600"
                           >Details</vs-button
                         >
                       </vs-td>

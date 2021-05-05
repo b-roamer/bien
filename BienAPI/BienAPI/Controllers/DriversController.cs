@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using BienAPI.Models;
 using Microsoft.AspNetCore.Mvc;
+using MySql.Data.MySqlClient.Authentication;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -36,9 +37,45 @@ namespace BienAPI.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public object Get(int id, [FromQuery] Pagination pagination)
         {
-            return "value";
+            var driver = _db.Drivers.Find(id);
+            var results = (from r in _db.Results
+                           join race in _db.Races
+                           on r.RaceId equals race.RaceId
+                           join c in _db.Constructors
+                           on r.ConstructorId equals c.ConstructorId
+                           join s in _db.Statuses
+                           on r.StatusId equals s.StatusId
+                           join circuit in _db.Circuits
+                           on race.CircuitId equals circuit.CircuitId
+                           where r.DriverId == id
+                           select new
+                           {
+                               Constructor = c.Name,
+                               race.Name,
+                               Circuit = circuit.Name,
+                               r.Number,
+                               r.Grid,
+                               r.Position,
+                               r.Points,
+                               r.Laps,
+                               r.Time,
+                               r.Ranks,
+                               Status = s.Status1,
+                               race.Date
+                           }).ToList().Skip((pagination.Page - 1) * pagination.PageSize)
+                    .Take(pagination.PageSize);
+
+            var totalRaces = (from r in _db.Results
+                              where r.DriverId == id
+                              select r.RaceId).Count();
+
+            var totalPoints = (from r in _db.Results
+                               where r.DriverId == id
+                               select r.Points).Sum();
+
+            return new { driver, results, totalRaces, totalPoints };
         }
 
         // POST api/values

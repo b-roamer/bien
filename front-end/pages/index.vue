@@ -1,5 +1,5 @@
 <template>
-  <div @page-change="test($event)">
+  <div class="-mt-8" @page-change="test($event)">
     <div class="relative">
       <video id="vid" autoplay muted loop width="100%">
         <source src="/video.mp4" type="video/mp4" />

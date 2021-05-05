@@ -47,3 +47,7 @@
 /Users/rustembaltiyev/Documents/GitHub/bien/BienAPI/BienAPI/obj/Debug/net5.0/ref/BienAPI.dll
 /Users/rustembaltiyev/Documents/GitHub/bien/BienAPI/BienAPI/obj/Debug/net5.0/BienAPI.pdb
 /Users/rustembaltiyev/Documents/GitHub/bien/BienAPI/BienAPI/obj/Debug/net5.0/BienAPI.genruntimeconfig.cache
+/Users/rustembaltiyev/Documents/GitHub/bien/BienAPI/BienAPI/bin/Debug/net5.0/Microsoft.AspNetCore.JsonPatch.dll
+/Users/rustembaltiyev/Documents/GitHub/bien/BienAPI/BienAPI/bin/Debug/net5.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+/Users/rustembaltiyev/Documents/GitHub/bien/BienAPI/BienAPI/bin/Debug/net5.0/Newtonsoft.Json.dll
+/Users/rustembaltiyev/Documents/GitHub/bien/BienAPI/BienAPI/bin/Debug/net5.0/Newtonsoft.Json.Bson.dll

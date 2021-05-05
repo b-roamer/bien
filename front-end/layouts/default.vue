@@ -8,7 +8,7 @@
       v-model="active"
     >
       <template #left>
-        <img src="/logo.png" alt="" width="20%" />
+        <nuxt-link to="/"><img src="/logo.png" alt="" width="20%" /></nuxt-link>
       </template>
       <template #right>
         <vs-navbar-item to="/" :active="active == 'home'" id="home">
@@ -36,12 +36,12 @@
         </vs-navbar-item>
       </template>
     </vs-navbar>
-    <Nuxt class="-mt-8 min-h-screen" />
+    <Nuxt class="min-h-screen " />
     <div
       class="w-full bg-gray-900 h-64 text-white flex justify-center items-center text-center"
     >
       <div>
-        <img class="mx-auto mb-4" src="f1-logo-red.png" alt="" width="50%" />
+        <img class="mx-auto mb-4" src="/f1-logo-red.png" alt="" width="50%" />
         <p class="text-3xl font-bold">Bien</p>
         <p class="text-xl">
           The Ultimate Archive of<br />
