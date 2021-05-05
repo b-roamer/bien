@@ -52,6 +52,7 @@ namespace BienAPI.Controllers
                            where r.DriverId == id
                            select new
                            {
+                               r.RaceId,
                                Constructor = c.Name,
                                race.Name,
                                Circuit = circuit.Name,
